@@ -52,7 +52,6 @@ public class Entrada {
 
         controlador.ejecutarCampeonato(campeonato);
 
-        // 1. ORDENAR LA GENERAL POR PUNTOS
         Collections.sort(campeonato.getCoches(), new Comparator<Coche>() {
             @Override
             public int compare(Coche c1, Coche c2) {
@@ -61,9 +60,7 @@ public class Entrada {
             }
         });
 
-        // 2. IMPRIMIR TABLA FORMATEADA
         System.out.println("\n=== CLASIFICACIÓN GENERAL ===\n");
-        // Los códigos %-12s sirven para reservar exactamente 12 huecos para cada palabra
         System.out.printf("%-10s %-15s %-10s %-10s%n", "Posición", "Piloto", "Dorsal", "Puntos");
         System.out.println("------------------------------------------------------------");
 
