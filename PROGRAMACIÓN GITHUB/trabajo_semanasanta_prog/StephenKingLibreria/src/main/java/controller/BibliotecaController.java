@@ -15,7 +15,6 @@ public class BibliotecaController {
         this.listaFavoritos = new ArrayList<>();
     }
 
-    // OPCIÓN 1: Carga los libros que vienen de la API en el objeto Biblioteca
     public void cargarLibros(ArrayList<Libro> librosNuevos) {
         if (librosNuevos != null && !librosNuevos.isEmpty()) {
             this.miBiblioteca.setListaLibros(librosNuevos);
@@ -26,7 +25,6 @@ public class BibliotecaController {
         }
     }
 
-    // MÉTODO AUXILIAR: Busca un libro por su ID dentro de la biblioteca cargada
     public Libro buscarPorId(int id) {
         if (miBiblioteca.getListaLibros() != null) {
             for (Libro l : miBiblioteca.getListaLibros()) {
@@ -38,7 +36,6 @@ public class BibliotecaController {
         return null;
     }
 
-    // OPCIÓN 3: Añade un libro de la biblioteca a la lista de favoritos
     public void anadirAFavoritos(int id) {
         Libro encontrado = buscarPorId(id);
         if (encontrado != null) {
@@ -50,7 +47,6 @@ public class BibliotecaController {
         }
     }
 
-    // Getter para que el FileController pueda obtener la lista y guardarla
     public ArrayList<Libro> getListaFavoritos() {
         return listaFavoritos;
     }

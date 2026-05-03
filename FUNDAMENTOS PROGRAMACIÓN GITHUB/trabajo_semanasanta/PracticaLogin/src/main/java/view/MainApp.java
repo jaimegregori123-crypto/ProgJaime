@@ -70,8 +70,7 @@ public class MainApp {
                     guardarUsuarios(lista);
                     break;
                 case 2:
-                    System.out.println("Opcion dar de baja en desarrollo...");
-                    guardarUsuarios(lista);
+                   darBajaTrabajador(lista, scanner);
                     break;
                 case 3:
                     for (Usuario usuario : lista) {System.out.println(usuario);}
